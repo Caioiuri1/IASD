@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 99;
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "wdth" 100,
+        "GRAD" 0,
+        "XOPQ" 96,
+        "XTRA" 468,
+        "YOPQ" 79,
+        "YTAS" 750,
+        "YTDE" -203,
+        "YTFI" 738,
+        "YTLC" 514,
+        "YTUC" 712;
+}
+
+body {
+    background: #78a2c279;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 90vh;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #013668;
+    min-height: 80vh;
+    min-width: 50vh;
+}
+
+.box img {
+    width: 250px;
+}
+
+.box p {
+    margin-top: 5rem;
+    color: white;
+    font-size: 25px;
+    font-weight: 100;
+}
+
+span {
+    font-weight: 800;
+    font-size: 35px;
+}
+
+.box h2 {
+    font-size: 14px;
+    color: white;
+    width: 300px;
+    margin-top: 5rem;
+}
+
+.versiculo {
+    color: white;
+    font-size: 16px;
+}
+
+.box em {
+    font-style: italic;
+    font-weight: 100;
+}
+
+.box-informações {
+    min-height: 80vh;
+    min-width: 50vh;
+    background: white;
+}
+
+.h1-cadastro h1 {
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.h1-cadastro h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #044683;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.box-inputs p {
+    margin-left: 20px;
+    margin-top: 40px;
+    color: #acacac;
+    margin-bottom: 20px;
+}
+
+.grupo-inputs {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 20px;
+    gap: 5px;
+    width: 300px;
+}
+
+.grupo-inputs label {
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.grupo-inputs input {
+    padding: 15px 10px;
+    border: none;
+    border: 1px solid #013668;
+    border-radius: 16px;
+    box-shadow: 1px 1px 6px #0000001c;
+    outline: 0;
+}
+
+.grupo-inputs input:hover {
+    background-color: #F0F8FF;
+    border: 1px solid #013668;
+}
+
+.grupo-inputs select {
+    padding: 15px 10px;
+    border: none;
+    border: 1px solid #013668;
+    border-radius: 16px;
+    box-shadow: 1px 1px 6px #0000001c;
+    outline: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("img-logo/round_arrow_down_icon_132795.svg");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+}
+
+.grupo-inputs select:hover {
+    background-color: #F0F8FF;
+    border: 1px solid #013668;
+}
+
+.box-inputs option {
+    background: transparent;
+    border-radius: 10px;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.button button{
+    padding: 10px 70px;
+    background: #013668;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 16px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #013668;
+    color: white;
+}
+
+footer img{
+    height: 100px;
+}
+
+footer a{
+    color: white;
+}
+
+@media (max-width: 1024px) {
+    section {
+        flex-direction: column;
+    }
+
+    .box,
+    .box-informações {
+        border-radius: 16px;
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .box {
+        padding: 1.5rem;
+    }
+
+    .box p {
+        font-size: 1.2rem;
+    }
+
+    .grupo-inputs {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .button button {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .box,
+    .box-informações {
+        min-width: 100%;
+        min-height: auto;
+        padding: 1rem;
+    }
+
+    .box img {
+        width: 150px;
+    }
+
+    .box p {
+        font-size: 1rem;
+    }
+
+    .h1-cadastro h1 {
+        font-size: 1.5rem;
+    }
+
+    .button button {
+        font-size: 0.9rem;
+        padding: 0.8rem 2rem;
+    }
+}
+
+
+@media (max-width: 1440px) {
+    section {
+        padding: 1.5rem;
+    }
+
+    .box,
+    .box-informações {
+        max-width: 550px;
+        min-height: 70vh;
+    }
+
+    .box p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    section {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .box,
+    .box-informações {
+        border-radius: 16px;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .box img {
+        width: 180px;
+    }
+
+    .box p {
+        font-size: 1.3rem;
+    }
+
+    .h1-cadastro h1 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .button button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .box,
+    .box-informações {
+        min-width: 100%;
+        padding: 1.5rem;
+    }
+
+    .box img {
+        width: 160px;
+    }
+
+    .box p {
+        font-size: 1.1rem;
+    }
+
+    .grupo-inputs {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .button button {
+        padding: 0.9rem 2rem;
+    }
+}
