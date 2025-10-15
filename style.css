@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    z-index: 99;
+    z-index: 9;
     font-family: "Roboto Flex", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
@@ -79,6 +79,71 @@ span {
     min-height: 80vh;
     min-width: 50vh;
     background: white;
+}
+
+.pag-historico {
+    min-height: 0vh;
+    min-width: 0vh;
+    background: rgb(255, 255, 255);
+    position: absolute; 
+    display: none;
+}
+
+.pag-historico.ativo {
+    display: block; 
+    animation: aparecer 0.4s ease;
+    z-index: 999;
+    min-width: 50vh;
+    min-height: 80vh;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#fechar {
+    top: 20px;
+    cursor: pointer;
+    width: 35px;
+    transition: transform 0.2s;
+}
+
+#fechar:hover {
+    transform: scale(1.1);
+}
+
+#pasta {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#pasta:hover {
+    transform: scale(1.1);
+}
+
+.pag-historico-informações{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.pag-historico-informações img{
+    width: 30px;
+}
+
+.h1-cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: 20px;
 }
 
 .h1-cadastro h1 {
@@ -158,23 +223,31 @@ span {
     border-radius: 10px;
 }
 
-.button{
+.button {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 4rem;
 }
 
-.button button{
+.button button {
     padding: 10px 70px;
     background: #013668;
     color: white;
     font-size: 16px;
     font-weight: 600;
     border-radius: 16px;
+    border: none;
+    transition: all ease-in-out 0.8s;
 }
 
-footer{
+.button button:hover {
+    background: #044683;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: translateY(-1px);
+}
+
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -182,13 +255,15 @@ footer{
     color: white;
 }
 
-footer img{
+footer img {
     height: 100px;
 }
 
-footer a{
+footer a {
     color: white;
 }
+
+
 
 @media (max-width: 1024px) {
     section {
@@ -200,6 +275,10 @@ footer a{
         border-radius: 16px;
         width: 100%;
         max-width: 600px;
+    }
+
+    .h1-cadastro {
+        margin-right: 0px;
     }
 }
 
@@ -221,10 +300,15 @@ footer a{
     .button button {
         width: 100%;
     }
+
+    .h1-cadastro {
+        margin-right: 0px;
+    }
 }
 
 
 @media (max-width: 480px) {
+
     .box,
     .box-informações {
         min-width: 100%;
@@ -248,6 +332,10 @@ footer a{
         font-size: 0.9rem;
         padding: 0.8rem 2rem;
     }
+
+    .h1-cadastro {
+        margin-right: 0px;
+    }
 }
 
 
@@ -264,6 +352,10 @@ footer a{
 
     .box p {
         font-size: 1.4rem;
+    }
+
+    .h1-cadastro {
+        margin-right: 0px;
     }
 }
 
@@ -296,29 +388,38 @@ footer a{
     .button button {
         width: 100%;
     }
-}
 
-@media (max-width: 768px) {
-    .box,
-    .box-informações {
-        min-width: 100%;
-        padding: 1.5rem;
+    .h1-cadastro {
+        margin-right: 0px;
     }
 
-    .box img {
-        width: 160px;
-    }
+    @media (max-width: 768px) {
 
-    .box p {
-        font-size: 1.1rem;
-    }
+        .box,
+        .box-informações {
+            min-width: 100%;
+            padding: 1.5rem;
+        }
 
-    .grupo-inputs {
-        width: 100%;
-        margin-left: 0;
-    }
+        .box img {
+            width: 160px;
+        }
 
-    .button button {
-        padding: 0.9rem 2rem;
+        .box p {
+            font-size: 1.1rem;
+        }
+
+        .grupo-inputs {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .button button {
+            padding: 0.9rem 2rem;
+        }
+
+        .h1-cadastro {
+            margin-right: 0px;
+        }
     }
 }
